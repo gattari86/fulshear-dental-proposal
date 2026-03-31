@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fulshear Dental Practice -- Marketing Proposal</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/lucide-static@latest/font/lucide.css" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0F2B4C;
+    --navy-deep: #091E36;
+    --cyan: #4BBDD8;
+    --cyan-light: #E8F6FA;
+    --cyan-glow: rgba(75, 189, 216, 0.15);
+    --white: #FFFFFF;
+    --off-white: #F7FAFB;
+    --charcoal: #1C2D3F;
+    --gray-600: #4A5B6E;
+    --gray-400: #8A99A8;
+    --gray-200: #D1DAE3;
+    --success: #2EAD6B;
+    --amber: #E6A817;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--charcoal);
+    background: var(--off-white);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .page {
+    width: 100%;
+    max-width: 1100px;
+    min-height: auto;
+    margin: 0 auto 40px;
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(15, 43, 76, 0.08);
+    page-break-after: always;
+    position: relative;
+  }
+
+  /* ========== PAGE 1: COVER + NORTH STAR ========== */
+  .cover-header {
+    background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 60%, #1A4068 100%);
+    padding: 56px 64px 48px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cover-header::before {
+    content: '';
+    position: absolute;
+    top: -80px;
+    right: -60px;
+    width: 320px;
+    height: 320px;
+    background: radial-gradient(circle, rgba(75, 189, 216, 0.12) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .cover-header::after {
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    right: 120px;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(75, 189, 216, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .cover-badge {
+    display: inline-block;
+    background: rgba(75, 189, 216, 0.15);
+    border: 1px solid rgba(75, 189, 216, 0.3);
+    color: var(--cyan);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cover-title {
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1.15;
+    margin-bottom: 12px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cover-title span { color: var(--cyan); }
+
+  .cover-subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--gray-400);
+    line-height: 1.5;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cover-meta {
+    display: flex;
+    gap: 32px;
+    margin-top: 24px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cover-meta-item {
+    font-size: 12px;
+    color: var(--gray-400);
+  }
+
+  .cover-meta-item strong {
+    color: var(--cyan);
+    font-weight: 600;
+  }
+
+  /* North Star */
+  .north-star { padding: 40px 64px 48px; }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin-bottom: 16px;
+  }
+
+  .north-star-statement {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.3;
+    margin-bottom: 24px;
+    padding-left: 20px;
+    border-left: 3px solid var(--cyan);
+  }
+
+  .kpi-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 28px;
+  }
+
+  .kpi-card {
+    flex: 1;
+    background: var(--off-white);
+    border-radius: 10px;
+    padding: 20px 24px;
+    text-align: center;
+    border: 1px solid var(--gray-200);
+  }
+
+  .kpi-number {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--navy);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .kpi-number.accent { color: var(--cyan); }
+
+  .kpi-label {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--gray-600);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .pillars {
+    display: flex;
+    gap: 16px;
+  }
+
+  .pillar {
+    flex: 1;
+    background: var(--cyan-light);
+    border-radius: 10px;
+    padding: 18px 20px;
+    border-left: 3px solid var(--cyan);
+  }
+
+  .pillar-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+  }
+
+  .pillar-icon svg {
+    width: 18px;
+    height: 18px;
+    stroke: var(--cyan);
+    stroke-width: 2;
+    fill: none;
+  }
+
+  .pillar-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 4px;
+  }
+
+  .pillar-desc {
+    font-size: 11.5px;
+    color: var(--gray-600);
+    line-height: 1.4;
+  }
+
+  /* ========== PAGE 2: PRICING ========== */
+  .tiers-header {
+    background: var(--navy);
+    padding: 32px 64px;
+  }
+
+  .tiers-header h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--white);
+  }
+
+  .tiers-header p {
+    font-size: 13px;
+    color: var(--gray-400);
+    margin-top: 4px;
+  }
+
+  .tiers-body { padding: 28px 64px 32px; }
+
+  /* Two main packages side by side */
+  .packages-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+
+  .package {
+    border: 1.5px solid var(--gray-200);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .package.primary {
+    border-color: var(--cyan);
+    box-shadow: 0 4px 20px var(--cyan-glow);
+  }
+
+  .package-head {
+    padding: 22px 28px 18px;
+    background: var(--off-white);
+    border-bottom: 1px solid var(--gray-200);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .package.primary .package-head {
+    background: var(--cyan-light);
+    border-bottom-color: rgba(75, 189, 216, 0.3);
+  }
+
+  .package-name {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--navy);
+  }
+
+  .package-type {
+    font-size: 11px;
+    color: var(--gray-600);
+    margin-top: 2px;
+  }
+
+  .package-price {
+    text-align: right;
+  }
+
+  .package-price-amount {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--cyan);
+    line-height: 1;
+  }
+
+  .package-price-label {
+    font-size: 10px;
+    color: var(--gray-600);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .package-body { padding: 20px 28px 24px; }
+
+  .package-features {
+    list-style: none;
+    padding: 0;
+  }
+
+  .package-features li {
+    font-size: 12px;
+    color: var(--charcoal);
+    padding: 5px 0 5px 24px;
+    position: relative;
+    line-height: 1.4;
+  }
+
+  .package-features li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--cyan);
+    opacity: 0.5;
+  }
+
+  .package.primary .package-features li::before { opacity: 1; }
+
+  .package-why {
+    margin-top: 14px;
+    padding: 12px 16px;
+    background: var(--off-white);
+    border-radius: 8px;
+    font-size: 11px;
+    color: var(--gray-600);
+    line-height: 1.5;
+    border-left: 3px solid var(--cyan);
+  }
+
+  .package-why strong { color: var(--charcoal); }
+
+  /* Ad spend callout */
+  .adspend-bar {
+    background: var(--navy);
+    border-radius: 10px;
+    padding: 18px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .adspend-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .adspend-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(75, 189, 216, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .adspend-icon svg {
+    width: 18px;
+    height: 18px;
+    stroke: var(--cyan);
+    stroke-width: 2;
+    fill: none;
+  }
+
+  .adspend-label {
+    font-size: 11px;
+    color: var(--gray-400);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .adspend-amount {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--white);
+  }
+
+  .adspend-note {
+    font-size: 11px;
+    color: var(--gray-400);
+    text-align: right;
+    line-height: 1.4;
+  }
+
+  /* Optional add-ons */
+  .addons-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--gray-400);
+    margin-bottom: 10px;
+  }
+
+  .addons-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+
+  .addon {
+    border: 1px solid var(--gray-200);
+    border-radius: 10px;
+    padding: 16px 18px;
+    background: var(--off-white);
+  }
+
+  .addon-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+  }
+
+  .addon-name {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--navy);
+  }
+
+  .addon-price {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--cyan);
+    white-space: nowrap;
+  }
+
+  .addon-desc {
+    font-size: 10.5px;
+    color: var(--gray-600);
+    line-height: 1.4;
+  }
+
+  /* Trust notes */
+  .trust-row {
+    display: flex;
+    gap: 20px;
+  }
+
+  .trust-note {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px 16px;
+    background: var(--off-white);
+    border-radius: 8px;
+  }
+
+  .trust-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--cyan-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .trust-icon svg {
+    width: 14px;
+    height: 14px;
+    stroke: var(--cyan);
+    stroke-width: 2;
+    fill: none;
+  }
+
+  .trust-text {
+    font-size: 11px;
+    color: var(--gray-600);
+    line-height: 1.4;
+  }
+
+  .trust-text strong { color: var(--charcoal); }
+
+  /* ========== PAGE 3: TIMELINE + NEXT STEPS ========== */
+  .timeline-header {
+    background: var(--navy);
+    padding: 32px 64px;
+  }
+
+  .timeline-header h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--white);
+  }
+
+  .timeline-body { padding: 28px 64px 20px; }
+
+  .timeline-track {
+    display: flex;
+    gap: 0;
+    margin-bottom: 28px;
+    position: relative;
+  }
+
+  .timeline-track::before {
+    content: '';
+    position: absolute;
+    top: 24px;
+    left: 20px;
+    right: 20px;
+    height: 3px;
+    background: var(--gray-200);
+    z-index: 0;
+  }
+
+  .t-phase {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .t-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--gray-200);
+    margin: 18px auto 10px;
+    border: 3px solid var(--white);
+    box-shadow: 0 0 0 2px var(--gray-200);
+  }
+
+  .t-phase.active .t-dot {
+    background: var(--cyan);
+    box-shadow: 0 0 0 2px var(--cyan), 0 0 12px var(--cyan-glow);
+  }
+
+  .t-month {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--navy);
+  }
+
+  .t-label {
+    font-size: 10px;
+    color: var(--gray-600);
+    margin-top: 2px;
+    line-height: 1.3;
+  }
+
+  .phase-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+
+  .phase-card {
+    border-radius: 10px;
+    padding: 20px 22px;
+    border: 1.5px solid var(--gray-200);
+  }
+
+  .phase-card.pre { border-left: 4px solid var(--amber); }
+  .phase-card.launch { border-left: 4px solid var(--cyan); }
+  .phase-card.grow { border-left: 4px solid var(--success); }
+
+  .phase-card-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .phase-card.pre .phase-card-label { color: var(--amber); }
+  .phase-card.launch .phase-card-label { color: var(--cyan); }
+  .phase-card.grow .phase-card-label { color: var(--success); }
+
+  .phase-card ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .phase-card li {
+    font-size: 11.5px;
+    color: var(--charcoal);
+    padding: 3px 0;
+    line-height: 1.35;
+  }
+
+  .phase-card li::before {
+    content: "\2192  ";
+    color: var(--gray-400);
+    font-size: 10px;
+  }
+
+  /* Attribution callout */
+  .attribution-bar {
+    background: var(--cyan-light);
+    border: 1px solid rgba(75, 189, 216, 0.3);
+    border-radius: 10px;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+
+  .attribution-bar svg {
+    width: 20px;
+    height: 20px;
+    stroke: var(--cyan);
+    stroke-width: 2;
+    fill: none;
+    flex-shrink: 0;
+  }
+
+  .attribution-text {
+    font-size: 12px;
+    color: var(--charcoal);
+    line-height: 1.4;
+  }
+
+  .attribution-text strong { color: var(--navy); }
+
+  /* CTA */
+  .cta-section {
+    background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%);
+    border-radius: 12px;
+    padding: 28px 36px;
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    margin: 0 0 20px;
+  }
+
+  .cta-left { flex: 1; }
+
+  .cta-left h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 8px;
+  }
+
+  .cta-left p {
+    font-size: 12.5px;
+    color: var(--gray-400);
+    line-height: 1.5;
+  }
+
+  .cta-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+  }
+
+  .cta-contact {
+    font-size: 12px;
+    color: var(--white);
+    font-weight: 500;
+  }
+
+  .cta-contact span { color: var(--cyan); }
+
+  /* Footer */
+  .page-footer {
+    padding: 12px 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--gray-200);
+    font-size: 10px;
+    color: var(--gray-400);
+  }
+
+  .page-footer strong { color: var(--gray-600); }
+
+  @media (max-width: 768px) {
+    .page { border-radius: 0; margin: 0 auto 20px; }
+    .cover-header { padding: 32px 24px 28px; }
+    .cover-title { font-size: 24px; }
+    .cover-subtitle { font-size: 14px; }
+    .cover-meta { flex-direction: column; gap: 8px; }
+    .north-star { padding: 24px 24px 32px; }
+    .north-star-statement { font-size: 17px; }
+    .kpi-row { flex-wrap: wrap; gap: 12px; }
+    .kpi-card { flex: 1 1 45%; padding: 14px 16px; }
+    .kpi-number { font-size: 26px; }
+    .pillars { flex-direction: column; gap: 12px; }
+    .tiers-header, .timeline-header { padding: 24px; }
+    .tiers-header h2, .timeline-header h2 { font-size: 20px; }
+    .tiers-body, .timeline-body { padding: 20px 24px; }
+    .packages-row { grid-template-columns: 1fr; gap: 16px; }
+    .package-head { flex-direction: column; gap: 8px; }
+    .package-price { text-align: left; }
+    .adspend-bar { flex-direction: column; gap: 12px; text-align: center; }
+    .adspend-note { text-align: center; }
+    .addons-row { grid-template-columns: 1fr; gap: 12px; }
+    .trust-row { flex-direction: column; gap: 10px; }
+    .timeline-track { flex-wrap: wrap; gap: 8px; justify-content: center; }
+    .timeline-track::before { display: none; }
+    .t-phase { flex: 0 0 30%; }
+    .phase-cards { grid-template-columns: 1fr; gap: 12px; }
+    .cta-section { flex-direction: column; gap: 20px; padding: 24px; text-align: center; }
+    .cta-right { align-items: center; }
+    .attribution-bar { flex-direction: column; text-align: center; }
+    .page-footer { padding: 12px 24px; }
+  }
+
+  @media print {
+    body { background: white; }
+    .page { box-shadow: none; margin: 0; border-radius: 0; max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ==================== PAGE 1: COVER + NORTH STAR ==================== -->
+<div class="page">
+  <div class="cover-header">
+    <div class="cover-badge">Marketing Proposal</div>
+    <h1 class="cover-title">Fulshear Dental Practice<br><span>Growth Partnership</span></h1>
+    <p class="cover-subtitle">A phased digital marketing plan to reach 40 new patients per month.</p>
+    <div class="cover-meta">
+      <div class="cover-meta-item">Prepared for <strong>Dr. Johnson Cheng, DDS</strong></div>
+      <div class="cover-meta-item">Prepared by <strong>Poppy Marketing & Consulting</strong></div>
+      <div class="cover-meta-item">Date <strong>March 31, 2026</strong></div>
+    </div>
+  </div>
+
+  <div class="north-star">
+    <div class="section-label">Strategic North Star</div>
+    <div class="north-star-statement">
+      "The Fulshear dentist who is open when you need them."<br>
+      <span style="font-size: 14px; font-weight: 400; color: var(--gray-600);">Emergency care + weekend hours + neighborhood trust.</span>
+    </div>
+
+    <div class="kpi-row">
+      <div class="kpi-card">
+        <div class="kpi-number accent">40</div>
+        <div class="kpi-label">New Patients / Month Target</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-number">~15</div>
+        <div class="kpi-label">Month 1 (Launch Traction)</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-number">~30</div>
+        <div class="kpi-label">Month 2 (Ads Optimized)</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-number">40+</div>
+        <div class="kpi-label">Month 3-4 (Steady State)</div>
+      </div>
+    </div>
+
+    <div class="section-label" style="margin-bottom: 12px;">Messaging Pillars</div>
+    <div class="pillars">
+      <div class="pillar">
+        <div class="pillar-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        <div class="pillar-title">Emergency & Urgent Care</div>
+        <div class="pillar-desc">"Toothache? We can see you today." Higher production per visit, faster revenue ramp.</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        </div>
+        <div class="pillar-title">Weekend & Extended Hours</div>
+        <div class="pillar-desc">"Open Saturdays because your schedule matters." Key differentiator in Fulshear.</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div class="pillar-title">Neighborhood Trust</div>
+        <div class="pillar-desc">"Your neighbor, your dentist." 400+ five-star reviews at Elyson prove the track record.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span><strong>Poppy Marketing & Consulting</strong> | Confidential</span>
+    <span>Page 1 of 3</span>
+  </div>
+</div>
+
+<!-- ==================== PAGE 2: PRICING ==================== -->
+<div class="page">
+  <div class="tiers-header">
+    <h2>Investment</h2>
+    <p>Simple structure. No long contracts. You own everything we build.</p>
+  </div>
+
+  <div class="tiers-body">
+    <div class="packages-row">
+      <!-- Launch Foundation -->
+      <div class="package">
+        <div class="package-head">
+          <div>
+            <div class="package-name">Launch Foundation</div>
+            <div class="package-type">One-time / Pre-launch build</div>
+          </div>
+          <div class="package-price">
+            <div class="package-price-amount">$6,500</div>
+            <div class="package-price-label">One Time</div>
+          </div>
+        </div>
+        <div class="package-body">
+          <ul class="package-features">
+            <li>Pre-launch strategy and positioning (emergency + Saturday angle)</li>
+            <li>Multi-page website build for new Fulshear clinic</li>
+            <li>Tracking and attribution in your accounts, not ours</li>
+            <li>Google Business Profile readiness plan and launch steps</li>
+            <li>Conversion system (forms, click-to-call, lead capture structure)</li>
+            <li>New patient offer messaging ($99 exam, $59 cleaning, in-house plans)</li>
+          </ul>
+          <div class="package-why">
+            <strong>When this happens:</strong> Starts immediately after kickoff (April) and runs through your pre-launch phase. Website, tracking, GBP, and all conversion systems are built and delivered before opening day. You pay this once at the start. No monthly fees until the Growth Engine begins.
+          </div>
+        </div>
+      </div>
+
+      <!-- Monthly Growth Engine -->
+      <div class="package primary">
+        <div class="package-head">
+          <div>
+            <div class="package-name">Monthly Growth Engine</div>
+            <div class="package-type">Ongoing / Month to month</div>
+          </div>
+          <div class="package-price">
+            <div class="package-price-amount">$1,750</div>
+            <div class="package-price-label">Per Month</div>
+          </div>
+        </div>
+        <div class="package-body">
+          <ul class="package-features">
+            <li>Google Ads management and ongoing optimization</li>
+            <li>Emergency dentistry ad group + Saturday availability messaging</li>
+            <li>Landing page and conversion tuning (ongoing improvements)</li>
+            <li>Monthly strategy session (performance review + growth planning)</li>
+            <li>Local SEO maintenance tied to what ads and leads tell us</li>
+            <li>Site adjustments based on performance data</li>
+            <li>Ongoing growth strategy: new services, seasonal offers, expansion ideas</li>
+          </ul>
+          <div class="package-why">
+            <strong>When this starts:</strong> Monthly billing begins when the foundation is complete and we are ready to turn on ads, typically 1 to 2 months before opening day. You are not paying monthly while we are still building. The $1,750/mo kicks in when we shift from building to actively driving patients to your door.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ad Spend Bar -->
+    <div class="adspend-bar">
+      <div class="adspend-left">
+        <div class="adspend-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <div>
+          <div class="adspend-label">Suggested Google Ads Budget</div>
+          <div class="adspend-amount">$3,000 / month to start</div>
+        </div>
+      </div>
+      <div class="adspend-note">
+        Paid directly to Google. Not to us.<br>
+        Optional ramp: $2,500-$3,000 month 1, $3,000-$4,000 month 2 if traction is strong.
+      </div>
+    </div>
+
+    <!-- Optional Add-ons -->
+    <div class="addons-label">Optional Add-Ons (only if needed)</div>
+    <div class="addons-row">
+      <div class="addon">
+        <div class="addon-head">
+          <div class="addon-name">Branding Package</div>
+          <div class="addon-price">$2,000</div>
+        </div>
+        <div class="addon-desc">Logo, colors, fonts, brand mini guide, and templates. Only if the new clinic needs a new identity separate from Elyson.</div>
+      </div>
+      <div class="addon">
+        <div class="addon-head">
+          <div class="addon-name">Pre-Launch Awareness Ads</div>
+          <div class="addon-price">$750 + $450/mo</div>
+        </div>
+        <div class="addon-desc">Meta ads for 4 to 6 weeks before opening. Build awareness in the Fulshear community before the doors open. Ad spend: $500-$1,500/mo.</div>
+      </div>
+      <div class="addon">
+        <div class="addon-head">
+          <div class="addon-name">AI Receptionist</div>
+          <div class="addon-price">$350/mo + usage</div>
+        </div>
+        <div class="addon-desc">After-hours and missed call capture. Bilingual. Real-time lead alerts. Optional post-launch or when call volume justifies it.</div>
+      </div>
+    </div>
+
+    <!-- Trust Notes -->
+    <div class="trust-row">
+      <div class="trust-note">
+        <div class="trust-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <div class="trust-text"><strong>Transparent billing.</strong> Ad spend goes directly to Google. We never mark up or take a cut.</div>
+      </div>
+      <div class="trust-note">
+        <div class="trust-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+        </div>
+        <div class="trust-text"><strong>Month to month.</strong> Cancel with 30 days notice. No long-term contracts. We earn it every month.</div>
+      </div>
+      <div class="trust-note">
+        <div class="trust-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="trust-text"><strong>You own everything.</strong> Website, ads accounts, tracking, data. If we part ways, it all stays with you.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span><strong>Poppy Marketing & Consulting</strong> | Confidential</span>
+    <span>Page 2 of 3</span>
+  </div>
+</div>
+
+<!-- ==================== PAGE 3: TIMELINE + NEXT STEPS ==================== -->
+<div class="page">
+  <div class="timeline-header">
+    <h2>Pre-Launch Timeline & Next Steps</h2>
+  </div>
+
+  <div class="timeline-body">
+    <div class="section-label">6-Month Roadmap to Opening Day (Oct 2026)</div>
+
+    <div class="timeline-track">
+      <div class="t-phase active">
+        <div class="t-month">Apr</div>
+        <div class="t-dot"></div>
+        <div class="t-label">Name & brand<br>Domain secured</div>
+      </div>
+      <div class="t-phase">
+        <div class="t-month">May</div>
+        <div class="t-dot"></div>
+        <div class="t-label">Website build<br>GBP created</div>
+      </div>
+      <div class="t-phase">
+        <div class="t-month">Jun</div>
+        <div class="t-dot"></div>
+        <div class="t-label">Content + SEO<br>Photography</div>
+      </div>
+      <div class="t-phase">
+        <div class="t-month">Jul</div>
+        <div class="t-dot"></div>
+        <div class="t-label">Site live<br>Ads built</div>
+      </div>
+      <div class="t-phase">
+        <div class="t-month">Aug-Sep</div>
+        <div class="t-dot"></div>
+        <div class="t-label">Final QA<br>Pre-launch push</div>
+      </div>
+      <div class="t-phase">
+        <div class="t-month">Oct</div>
+        <div class="t-dot"></div>
+        <div class="t-label" style="font-weight: 700; color: var(--navy);">Opening Day<br>Ads go live</div>
+      </div>
+    </div>
+
+    <div class="phase-cards">
+      <div class="phase-card pre">
+        <div class="phase-card-label">Phase 1: Pre-Launch (Apr - Sep)</div>
+        <ul>
+          <li>Secure domain + finalize brand</li>
+          <li>Build and launch website</li>
+          <li>GBP "opening soon" + weekly posts</li>
+          <li>SEO: service pages, schema, titles</li>
+          <li>Build Google Ads campaigns (paused)</li>
+          <li>Set up tracking and conversion system</li>
+          <li>Collect early reviews from Elyson patients in Fulshear</li>
+        </ul>
+      </div>
+      <div class="phase-card launch">
+        <div class="phase-card-label">Phase 2: Launch (Oct - Nov)</div>
+        <ul>
+          <li>Google Ads go live on opening day</li>
+          <li>Review request system activated</li>
+          <li>Daily monitoring first 2 weeks</li>
+          <li>Weekly ad optimization begins</li>
+          <li>First monthly performance report</li>
+          <li>Keyword expansion from search data</li>
+          <li>Emergency + Saturday campaigns prioritized</li>
+        </ul>
+      </div>
+      <div class="phase-card grow">
+        <div class="phase-card-label">Phase 3: Scale (Dec+)</div>
+        <ul>
+          <li>Ramp toward 40 new patients per month</li>
+          <li>Landing page A/B testing</li>
+          <li>Organic ranking optimization</li>
+          <li>GBP: reviews, photos, posts</li>
+          <li>Monthly performance reviews</li>
+          <li>Ad budget scaling based on ROI</li>
+          <li>New service page expansion</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Attribution callout -->
+    <div class="attribution-bar">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+      <div class="attribution-text">
+        <strong>Full attribution transparency.</strong> All tracking numbers, ad accounts, website, and reporting dashboards are in your name, under your control. We do not run ads through vendor-owned landing pages or inflate lead counts with agency tracking numbers. You see exactly what is working and what is not.
+      </div>
+    </div>
+
+    <div class="cta-section">
+      <div class="cta-left">
+        <h3>Ready to get started?</h3>
+        <p>Once you confirm the practice name and opening date, we lock final pricing, send the kickoff checklist, and begin building immediately. No long contracts, no hidden fees.</p>
+      </div>
+      <div class="cta-right">
+        <div class="cta-contact"><span>Ricardo Gattas</span></div>
+        <div class="cta-contact">ricardo@poppymarketingandconsulting.com</div>
+        <div class="cta-contact">(941) 777-4933</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span><strong>Poppy Marketing & Consulting</strong> | Confidential</span>
+    <span>Page 3 of 3</span>
+  </div>
+</div>
+
+</body>
+</html>
